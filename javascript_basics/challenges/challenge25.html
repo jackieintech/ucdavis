@@ -1,0 +1,37 @@
+<!doctype hmtl>
+<html>
+<head>
+	<meta charset="UFT-8">
+	<title>JavaScript Event Challenges: Challenge 25</title>
+
+</head>
+<body>
+	<h1>JavaScript Event Challenges: Challenge 25</h1>
+	<div>
+		<p>Here is a paragraph of text:</p>
+		<p>So much information</p>
+	</div>
+	<button>Add a paragraph!</button>
+	<button>Remove a paragraph!</button> 
+	<script>
+		var removeButton = document.getElementsByTagName("button")[1];
+
+		// console.log(removeButton);
+
+
+				// console.log(myDiv);
+				// console.log(goodbyeParagraph);
+
+		
+// console.log(theDiv);
+
+		removeButton.addEventListener("click", function(){
+			var myDiv = document.querySelector("div");
+			var myParagraphs = myDiv.getElementsByTagName("p");
+			var goodbyeParagraph=myParagraphs[1];
+			var theDiv = myDiv.removeChild(goodbyeParagraph);
+		});
+
+	</script>
+</body>
+</html>

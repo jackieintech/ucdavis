@@ -1,0 +1,65 @@
+<!doctype hmtl>
+<html>
+<head>
+	<meta charset="UFT-8">
+	<title>JavaScript Event Challenges: Challenge 26</title>
+
+</head>
+<body>
+	<h1>JavaScript Event Challenges: Challenge 26</h1>
+	<div>
+		<p>This is a paragraph.</p>
+	</div>
+	<button>Add a paragraph!</button>
+	<button>Remove a paragraph!</button> 
+	<script>
+		var myButton = document.querySelector("button");
+		var myDiv = document.querySelector("div");
+		var numParagraphs=1;
+		console.log(myDiv);
+		console.log(myButton);
+
+		myButton.addEventListener("click", function(){
+			numParagraphs++;
+			var newP= document.createElement("p");
+			var pText= document.createTextNode(`This is paragraph number ${numParagraphs}.`);
+			alert("I'm sending you more info!");
+			newP.appendChild(pText);
+			myDiv.appendChild(newP);
+			console.log(numParagraphs);
+
+		});
+
+
+		var removeButton = document.getElementsByTagName("button")[1];
+
+		// console.log(removeButton);
+
+
+				// console.log(myDiv);
+				// console.log(goodbyeParagraph);
+
+		
+// console.log(theDiv);
+
+		removeButton.addEventListener("click", function(){
+			numParagraphs--;
+
+			console.log(numParagraphs);
+
+			if (numParagraphs >= 1){
+			var myRemoveDiv = document.querySelector("div");
+			var myParagraphs = myRemoveDiv.getElementsByTagName("p");
+			var goodbyeParagraph=myParagraphs[1];
+			var theDiv = myRemoveDiv.removeChild(goodbyeParagraph);
+			}
+			else {
+				numParagraphs++;
+				alert("hey that's enough now!");
+
+			}
+		});
+
+	</script>
+</body>
+</html>

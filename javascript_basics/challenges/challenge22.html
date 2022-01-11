@@ -1,0 +1,26 @@
+<!doctype hmtl>
+<html>
+<head>
+	<meta charset="UFT-8">
+	<title>JavaScript Event Challenges: Challenge 22</title>
+
+</head>
+<body>
+	<h1>JavaScript Event Challenges: Challenge 22</h1>
+	<p>Here is a paragraph of text:</p>
+	<button>Turn Green, Damnit!</button>
+	
+	
+	<script>
+		var myButton = document.querySelector("button");
+		var myParagraph = document.querySelector("p");
+		console.log(myButton);
+		console.log(myParagraph);
+
+		myButton.addEventListener('click', function(){
+			alert("I'll make you green!");
+			myParagraph.style.color = "green";
+		});
+	</script>
+</body>
+</html>

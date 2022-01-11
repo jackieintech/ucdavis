@@ -1,0 +1,61 @@
+<!doctype hmtl>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Basic Challenges: Challenge 16</title>
+</head>
+<body>
+	<h1>JavaScript Basic Challenges: Challenge 16</h1>
+	<script>
+	var nameRequest = prompt("What's your name?", "Mary");
+	
+	function hello(nameRequest) {
+		var greeting;
+
+		// console.log(`Hello there, ${nameRequest}!`);
+
+	if (nameRequest == null || nameRequest == "") {
+		greeting = "You didn't give me your name.";
+	}
+	else {
+		greeting = `Hello, ${nameRequest}.`;
+	}
+
+	return greeting;
+
+} 
+// console.log(hello(nameRequest));
+
+foods = ["pizza", "peanut butter", "hazelnut", "broccoli"];
+giftCollection = ["an iPhone", "a MacBook", "a Dell laptop", "an Apple watch", "a Tesla"];
+
+
+function randomInt(min,max) {
+		// var numOfValues = max - min + 1;
+		// var randomNum = Math.random();
+		// var randomVal = randomNum * numOfValues;
+		// var roundedRandomVal = Math.floor(randomVal);
+		// var finalNum = min + roundedRandomVal;
+
+		return Math.floor((max-min+1)*Math.random() + min);
+
+	}
+
+
+
+
+
+function hospitality(nameRequest,giftCollection) {
+	console.log(hello(nameRequest));
+	var randomGift= (giftCollection[randomInt(0,giftCollection.length -1)]);
+	for (var i=0; i < giftCollection.length; i++) {
+		console.log(`${nameRequest}, would you like ${randomGift}?`);
+	}
+} 
+
+hospitality(nameRequest,giftCollection);
+
+	// hello(nameRequest);
+	</script>
+</body>
+</html>

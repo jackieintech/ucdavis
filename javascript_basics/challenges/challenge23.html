@@ -1,0 +1,30 @@
+<!doctype hmtl>
+<html>
+<head>
+	<meta charset="UFT-8">
+	<title>JavaScript Event Challenges: Challenge 23</title>
+
+</head>
+<body>
+	<h1>JavaScript Event Challenges: Challenge 23</h1>
+	<p>Here is a paragraph of text:</p>
+	<p>I like peanut butter.</p>
+	<p>I love broccoli.</p>
+	<button>Turn Them ALL Green, Damnit!</button>
+	
+	
+	<script>
+		var myButton = document.querySelector("button");
+		var myParagraphs = document.querySelectorAll("p");
+		console.log(myButton);
+		console.log(myParagraphs);
+
+		myButton.addEventListener('click', function(){
+			alert("I'll make you all green!");
+			for(var i=0; i<myParagraphs.length; i++){
+				myParagraphs[i].style.color = "green";
+			}
+		});
+	</script>
+</body>
+</html>
